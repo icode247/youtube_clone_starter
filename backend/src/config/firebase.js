@@ -7,7 +7,7 @@ const serviceAccount = require("../serviceAccountKey.json");
 export function initializeFirebase() {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    storageBucket: "gs://myproject-3ee81.appspot.com"//process.env.FIREBASE_STORAGE_BUCKET,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   });
 }
 initializeFirebase();
